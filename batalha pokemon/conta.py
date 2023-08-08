@@ -83,35 +83,6 @@ def nickname(txt = 'Digite seu nick no jogo: '):
                 return a
 
 
-def pegar_do_txt(arqui):
-    lst = {}
-
-    with open (arqui, 'rt') as arc:
-            cont = 1
-            chars = '\n'
-            prod = ''
-            for valor in arc:
-                if cont % 2 == 0:
-                    res = valor.translate(str.maketrans('', '', chars))
-                    lst[prod] = res
-                    cont += 1
-
-                else:
-                    res = valor.translate(str.maketrans('', '', chars))
-                    prod = res
-                    lst[res] = 0
-                    cont += 1
-
-    return lst
-
-
-def salvar_usuarios(arqui, lst):
-    with open(arqui, 'wt') as arc:
-        for iten in lst:
-            arc.write(f'{iten}\n')
-            arc.write(f'{lst[iten]}\n')
-
-
 
 
 def cadastro_novo_usuario():
@@ -207,9 +178,6 @@ def entrar_conta():
 
                     return dados
 
-
-
-
                 else:
                         xx()
                         print('Senha inválida')
@@ -220,9 +188,6 @@ def entrar_conta():
 
                         if a == 2:
                             break
-                
-
-
 
             else:
                 xx()
@@ -371,49 +336,3 @@ def salvar_informacoess(id, nivel, vida, atk, defesa, velocidade, itens, nomepok
 
             cursor.close()
             con.close()
-
-    # with open (f'saves/{nome}/treinador.txt', 'w+') as p:
-            
-        #     for item in itens: # Loop dos itens
-
-        #         # p.write(f'{item}\n') # Nome do item.
-        #         p.write(f'{str(itens[item][0])}\n') # Quantidade do item.
-
-        #     p.write(f'{pokedollar}\n')
-
-
-
-        
-
-# import mysql.connector
-
-# mydb = mysql.connector.connect(
-
-# host = "localhost",
-# user = "root",
-# password = "",
-# database = "gamepoke"
-
-# )
-
-# if mydb.is_connected():
-#     cursor = mydb.cursor()
-
-#     comando2 = "SELECT id FROM treinador ORDER BY id desc LIMIT 1;"
-#     cursor.execute(comando2)
-#     ident = cursor.fetchone()
-
-#     print(ident)
-
-
-
-# con = conex()
-
-# if con:        
-#         cursor = con.cursor()
-#         comando = 'select * from pokemon where pk_pokemon = %s'
-#         id = 3
-#         cursor.execute(comando, (id,))
-#         lista = cursor.fetchall()
-#         print(lista)
-

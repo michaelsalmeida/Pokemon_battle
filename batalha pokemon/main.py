@@ -33,7 +33,7 @@ for player in range (0, 2): # Loop responsável por realizar o login dos treinad
                 poke1.atualizar_status(coisaspokemon1)
 
 
-                treinador1 = Treinador(poke1.vida, poke1.ataques, nome1)
+                treinador1 = Treinador(poke1.vida, poke1.vidaorigial, poke1.ataques, nome1)
 
                 treinador1.atualizar_itens(coisastreinador1)
 
@@ -56,7 +56,7 @@ for player in range (0, 2): # Loop responsável por realizar o login dos treinad
 
                 poke2.atualizar_status(coisaspokemon2)
 
-                treinador2 = Treinador(poke2.vida, poke2.ataques, nome2)
+                treinador2 = Treinador(poke2.vida, poke2.vidaorigial, poke2.ataques, nome2)
 
                 treinador2.atualizar_itens(coisastreinador2)
 
@@ -237,10 +237,6 @@ while True: # Loop responsável pelo centro pokémon ou a pokémart.
 
 
 
-
-
-
-
 turno = True   # True significa turno do poke1, False significa turno do poke2
 
 
@@ -248,7 +244,7 @@ while True: # Loop responsável pela batalha em si.
     if poke1.vida <= 0:
         xx()
         print(f'{poke1.nome} não pode continuar, vitória para o {poke2.nome}')
-        salvar_informacoess(playerr1[1], poke1.nivel, poke1.vida, poke1.atk, poke1.defesa, poke1.velocidade, treinador1.itens, escolhapokemon1, treinador1.pokedollar, coisaspokemon1[6])
+        salvar_informacoess(playerr1[1], poke1.nivel, 0, poke1.atk, poke1.defesa, poke1.velocidade, treinador1.itens, escolhapokemon1, treinador1.pokedollar, coisaspokemon1[6])
         salvar_informacoess(playerr2[1], poke2.nivel, poke2.vida, poke2.atk, poke2.defesa, poke2.velocidade, treinador2.itens, escolhapokemon2, treinador2.pokedollar, coisaspokemon2[6])
         break
 
@@ -256,7 +252,7 @@ while True: # Loop responsável pela batalha em si.
         xx()
         print(f'{poke2.nome} não pode continuar, vitória para o {poke1.nome}')
         salvar_informacoess(playerr1[1], poke1.nivel, poke1.vida, poke1.atk, poke1.defesa, poke1.velocidade, treinador1.itens, escolhapokemon1, treinador1.pokedollar, coisaspokemon1[6])
-        salvar_informacoess(playerr2[1], poke2.nivel, poke2.vida, poke2.atk, poke2.defesa, poke2.velocidade, treinador2.itens, escolhapokemon2, treinador2.pokedollar, coisaspokemon2[6])
+        salvar_informacoess(playerr2[1], poke2.nivel, 0, poke2.atk, poke2.defesa, poke2.velocidade, treinador2.itens, escolhapokemon2, treinador2.pokedollar, coisaspokemon2[6])
         break
 
 

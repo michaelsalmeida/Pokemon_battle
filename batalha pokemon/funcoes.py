@@ -271,6 +271,8 @@ def coisastreina(id):
 
         for iten in range (2, 7):
             final.append(lista[0][iten])
+            
+        print(final)
 
 
     return final

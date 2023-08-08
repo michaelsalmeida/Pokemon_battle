@@ -13,7 +13,7 @@ class Pokemon:
         match(nome):
             case 'charmander':
                 self.vida = 188
-                # self.vidainicial = 188
+                self.vidaoriginal = 188
                 self.atk = 98
                 self.defesa = 81
                 self.velocidade = 121 
@@ -23,7 +23,7 @@ class Pokemon:
             
             case 'squirtle': 
                 self.vida = 198
-                # self.vidainicial = 198
+                self.vidaoriginal = 198
                 self.atk = 90
                 self.defesa = 121
                 self.velocidade = 81 
@@ -33,7 +33,7 @@ class Pokemon:
            
             case 'bulbasaur': 
                 self.vida = 200
-                # self.vidainicial = 200
+                self.vidaorigial = 200
                 self.atk = 92
                 self.defesa = 92
                 self.velocidade = 85 
@@ -43,6 +43,7 @@ class Pokemon:
             
             case 'pikachu':
                 self.vida = 180
+                self.vidaorigial = 180
                 self.atk = 103
                 self.defesa = 76
                 self.velocidade = 85 
@@ -51,6 +52,7 @@ class Pokemon:
 
             case 'butterfree':
                 self.vida = 230
+                self.vidaorigial = 230
                 self.atk = 85
                 self.defesa = 94
                 self.velocidade = 130 
@@ -59,6 +61,7 @@ class Pokemon:
 
             case 'articuno':
                 self.vida = 290
+                self.vidaorigial = 290
                 self.atk = 157
                 self.defesa = 184
                 self.velocidade = 157 
@@ -136,10 +139,6 @@ class Pokemon:
         self.atk = int(lst[3])
         self.defesa = int(lst[4])
         self.velocidade = int(lst[5])
-
-
-
-
 
 
 def lista_pokemons():

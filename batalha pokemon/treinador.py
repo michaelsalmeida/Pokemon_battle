@@ -2,12 +2,13 @@ from funcoes import *
 
 
 class Treinador:
-    def __init__(self, vidapokemon, atkspokemon, nome):
+    def __init__(self, vidapokemon, vidapokemonoriginal, atkspokemon, nome):
         self.nome = nome 
         self.pokedollar = 0
         self.vidapokemon = vidapokemon
+        self.vidapokemonoriginal = vidapokemonoriginal
         self.atkspokemon = atkspokemon
-        self.itens = {'potion' : [5, 20], 'superpotion' : [5, 50], 'hyperpotion' : [1, 200], 'maxpotion' : [1, self.vidapokemon]}
+        self.itens = {'potion' : [5, 20], 'superpotion' : [5, 50], 'hyperpotion' : [1, 200], 'maxpotion' : [1, self.vidapokemonoriginal]}
         self.potion = [5, 20]                    #[quantidade, quanto cura]   /   HP + 20
         self.superpotion = [5, 50]               #[quantidade, quanto cura]  /    HP + 50
         self.hyperpotion = [1, 200]              #[quantidade, quanto cura]  /    HP + 200
