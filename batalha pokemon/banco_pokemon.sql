@@ -1,4 +1,4 @@
-drop database gamepoke;
+drop database if exists gamepoke;
 
 create database gamepoke;
 use gamepoke;
