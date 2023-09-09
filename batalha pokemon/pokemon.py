@@ -1,6 +1,7 @@
 from random import randint, uniform
 from funcoes import *
 
+# Patch note no articuno que ta roubado.
 
 class Pokemon:
     def __init__(self, nome, nivel):
