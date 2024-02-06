@@ -75,7 +75,7 @@ for player in range (0, 2): # Loop responsável por realizar o login dos treinad
 
             poke1 = Pokemon(escolhapokemon1, 35)
 
-            treinador1 = Treinador(poke1.vida, poke1.ataques, nome1)
+            treinador1 = Treinador(poke1.vida, poke1.vida, poke1.ataques, nome1)
 
             salvar_informacoes(playerr3, poke1.nivel, poke1.vida, poke1.atk, poke1.defesa, poke1.velocidade, treinador1.itens, escolhapokemon1, treinador1.pokedollar, poke1.vida)
         
